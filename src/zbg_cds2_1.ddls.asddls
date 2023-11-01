@@ -26,8 +26,7 @@ define view ZBG_CDS2_1
       currency_conversion( amount => vbrp.netwr,
                            source_currency => vbrp.waerk,
                            target_currency => cast('EUR' as abap.cuky(5)),
-                           exchange_rate_date=>vbrk.fkdat,
-                           error_handling => 'SET_TO_NULL' ) as Conversion_Netwr,
+                           exchange_rate_date=>vbrk.fkdat ) as Conversion_Netwr,
 
       left(vbak.kunnr, 3)                                    as left_kunnr,
       length( mara.matnr )                                   as Matnr_Length,
